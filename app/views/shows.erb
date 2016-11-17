@@ -1,0 +1,18 @@
+<h1>Anagrams for <%= "#{@word}" %></h1>
+
+  <table>
+    <thead style="text-align:center">
+      <th>Results</th>
+    </thead>
+    <tbody>
+      <tr>
+        <% if !@anagrams.nil? %>
+        <% @anagrams.each do |word| %>
+        <td>
+          <%= word.text %>
+        </td>
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
