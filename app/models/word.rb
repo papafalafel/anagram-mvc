@@ -4,7 +4,7 @@ class Word
     letters = string.split(//)
     anagrams = []
     letters.each do |letter|
-    remaining = letters.select { |1| 1 != letter }
+    remaining = letters.select { |l| l != letter }
     anagrams << letter + remaining.join('')
     anagrams << letter + reverse_letters(remaining).join('')
   end
