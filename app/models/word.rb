@@ -1,5 +1,6 @@
 class Word
 
+
   def self.find_anagrams(string)
     letters = string.split(//)
     anagrams = []
