@@ -24,6 +24,7 @@ GEM
     minitest (5.5.1)
     pg (0.19.0)
     pg (0.19.0-x86-mingw32)
+    puma (3.10.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -63,6 +64,7 @@ DEPENDENCIES
   activerecord
   faker
   pg
+  puma
   rack
   rack-test
   rake
