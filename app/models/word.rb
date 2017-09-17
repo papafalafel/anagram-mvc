@@ -3,11 +3,18 @@ class Word < ActiveRecord::Base
 
   def self.find_anagrams(string)
     letters = string.split(//)
-    anagrams = []
+    combinations = []
     letters.each do |letter|
     remaining = letters.select { |l| l != letter }
-    anagrams << letter + remaining.join('')
-    anagrams << letter + reverse_letters(remaining).join('')
+    combinations << letter + remaining.join('')
+    combinations << letter + reverse_letters(remaining).join('')
+  end
+
+  anagrams = []
+  combinations.each do |word|
+    if Word.find_by_text(word).present?
+      anagrams << word
+    end
   end
 
   anagrams
@@ -23,5 +30,4 @@ def self.reverse_letters(letters)
 
   reversed_letters
 end
-
 end
