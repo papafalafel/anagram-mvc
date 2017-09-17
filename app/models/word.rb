@@ -50,11 +50,14 @@ def self.distinct_letters?(input)
 end
 
 def self.valid_input?(input)
-  if three_letters?(input) && distinct_letters?(input)
-    true
-  else
-    false
+  if input.length > 3
+    raise Exception.new("Only 3 letter or less words please!")
   end
+  #if three_letters?(input) && distinct_letters?(input)
+  #  true
+  #else
+  #  false
+  #end
 end
 
 end

@@ -16,11 +16,16 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     builder (3.2.2)
+    commonjs (0.2.7)
     diff-lcs (1.2.5)
     faker (1.6.6)
       i18n (~> 0.5)
+    font-awesome-less (4.7.0)
+      less (>= 2.4.0)
     i18n (0.7.0)
     json (1.8.2)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
     minitest (5.5.1)
     pg (0.19.0)
     pg (0.19.0-x86-mingw32)
@@ -63,6 +68,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   faker
+  font-awesome-less
   pg
   puma
   rack
