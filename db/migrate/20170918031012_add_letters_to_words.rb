@@ -1,4 +1,4 @@
-class AddLettersToWords < ActiveRecord::Migration
+class AddLettersToWords < ActiveRecord::Migration[4.2]
   def change
     add_column :words, :letters, :string
 
