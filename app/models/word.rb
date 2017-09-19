@@ -1,5 +1,5 @@
 class Word < ActiveRecord::Base
-
+  before_create :add_letters
 
   def self.find_anagrams(string)
     letters = string.split(//)
@@ -58,6 +58,12 @@ def self.valid_input?(input)
   #else
   #  false
   #end
+end
+
+def add_letters
+  characters = self.text.chars
+  alphabetized_characters = characters.sort
+  self.letters = alphabetized_characters.join
 end
 
 end
