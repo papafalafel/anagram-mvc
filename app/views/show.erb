@@ -1,10 +1,10 @@
 <h1>Anagrams for <%= "#{@word}" %></h1>
 <center><img src="/images/assets/arrow.png" alt="arrow" style="width: 50px; height: 50px; text-align: center;" /></center>
-<ul class="list">
+<ul class="anagrams">
   <% if !@anagrams.nil? %>
   <% @anagrams.each do  |word| %>
   <li>
-    <%= word %>
+    <%= "#{word.text}" %>
   </li>
   <% end %>
   <%else %>

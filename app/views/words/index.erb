@@ -1,0 +1,15 @@
+<h1>Words</h1>
+<table class="table table-striped">
+  <thead>
+    <th style="text-align-center">Text</th>
+    <th style="text-align-center">Letters</th>
+  </thead>
+  <tbody>
+    <% @words.sort.each do |word| %>
+    <tr>
+      <td><a href="<%= "/words/#{word.id}" %>"><% word.text %></td>
+      <td><% word.letters %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
